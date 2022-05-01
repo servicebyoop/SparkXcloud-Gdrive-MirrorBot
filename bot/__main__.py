@@ -53,8 +53,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot")
-    buttons.buildbutton("Channel", "https://t.me/SparkXcloud")
+    buttons.buildbutton("Join here", "https://t.me/gdriveop")
+    buttons.buildbutton("Report Grouo", "https://t.me/opgohilmirr")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
@@ -62,7 +62,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else :
             sendMarkup(start_string, context.bot, update, reply_markup)
     else :
-        sendMarkup(f"Oops! not a Authorized user.\nPlease deploy your own <b>SparkXcloud-Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
+        sendMarkup(f"Oops! You are not mt owner.\n Dont spam here and join <b>opgohil</b>.", context.bot, update, reply_markup)
 
 
 def restart(update, context):
